@@ -150,7 +150,8 @@ h3 { font-size: 1.25rem; }
 
 .scrub { position: relative; height: 420vh; background: var(--ink); }
 .scrub-stage { position: sticky; top: 0; height: 100vh; overflow: hidden; }
-.scrub-stage video, .scrub-stage .scrub-fallback-img {
+.scrub-stage canvas { background: url(assets/stage_a_1600.jpg) center/cover no-repeat; }
+.scrub-stage video, .scrub-stage canvas, .scrub-stage .scrub-fallback-img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
