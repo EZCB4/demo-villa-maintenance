@@ -99,7 +99,7 @@ h3 { font-size: 1.25rem; }
 }
 .nav-links a:hover::after, .nav-links a[aria-current="page"]::after { right: 0; }
 
-.nav.solid { background: rgba(247, 246, 242, .92); backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--mist); }
+.nav.solid { background: rgba(247, 246, 242, .97); box-shadow: 0 1px 0 var(--mist); }
 .nav.solid .nav-links a { color: var(--ink); }
 .nav.on-light .nav-links a { color: var(--ink); }
 
@@ -410,7 +410,7 @@ h3 { font-size: 1.25rem; }
   text-transform: uppercase;
   color: #fff;
   background: rgba(11, 35, 32, .55);
-  backdrop-filter: blur(6px);
+  
   padding: 7px 14px;
   border-radius: 999px;
 }
@@ -524,7 +524,7 @@ footer { background: var(--ink); color: rgba(255, 255, 255, .68); padding: 74px 
     margin: 5px auto;
     transition: transform .3s var(--ease), opacity .3s;
   }
-  .nav-burger { color: #fff; background: rgba(11, 35, 32, .3); border-radius: 10px; backdrop-filter: blur(4px); }
+  .nav-burger { color: #fff; background: rgba(11, 35, 32, .45); border-radius: 10px; }
   .nav.solid .nav-burger, .nav.on-light .nav-burger { color: var(--ink); }
   .nav.open .nav-burger::before { transform: translateY(7px) rotate(45deg); }
   .nav.open .nav-burger i { opacity: 0; }

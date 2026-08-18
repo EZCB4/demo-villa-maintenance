@@ -169,8 +169,12 @@
         /* adaptive chase: sprint on flings, glide on eases */
         sCur += gap * (Math.abs(gap) > 0.18 ? 0.34 : 0.15);
         if (Math.abs(gap) < 0.0006) sCur = sTarget;
-        if (svDur && !sv.seeking && Math.abs(sCur * svDur - sv.currentTime) > 0.008) {
-          try { sv.currentTime = clamp01(sCur) * Math.max(svDur - 0.06, 0); } catch (e) {}
+        if (svDur && !sv.seeking) {
+          /* snap to the 20fps frame grid: never ask the decoder for a frame it just gave us */
+          var seekT = Math.round(clamp01(sCur) * Math.max(svDur - 0.06, 0) * 20) / 20;
+          if (Math.abs(seekT - sv.currentTime) > 0.024) {
+            try { sv.currentTime = seekT; } catch (e) {}
+          }
         }
         var p = clamp01(sCur);
         if (bar) bar.style.width = (p * 100).toFixed(2) + '%';
