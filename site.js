@@ -283,7 +283,7 @@
       toastEl = document.createElement('div');
       toastEl.className = 'demo-toast';
       toastEl.setAttribute('role', 'status');
-      toastEl.textContent = 'This is a demo site. Contact buttons are switched off.';
+      toastEl.textContent = 'This is a concept site. Contact buttons are switched off.';
       document.body.appendChild(toastEl);
     }
     requestAnimationFrame(function () { toastEl.classList.add('show'); });

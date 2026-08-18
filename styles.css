@@ -584,16 +584,6 @@ footer { background: var(--ink); color: rgba(255, 255, 255, .68); padding: 74px 
 footer .brand { color: #fff; margin-bottom: 16px; }
 .brand.brand-foot .brand-mark { width: 40px; height: 40px; }
 
-/* demo badge */
-.demo-badge {
-  position: fixed; left: 14px; bottom: 14px; z-index: 80;
-  font-family: "Manrope", sans-serif; font-size: .72rem; font-weight: 800;
-  letter-spacing: .08em; text-transform: uppercase;
-  background: var(--ink); color: #fff; border: 1px solid rgba(255,255,255,.18);
-  padding: 8px 14px; border-radius: 999px; box-shadow: 0 8px 24px rgba(11,35,32,.35);
-  pointer-events: none; opacity: .92;
-}
-@media print { .demo-badge { display: none; } }
 
 
 /* ---------- audit pass: a11y + polish ---------- */
