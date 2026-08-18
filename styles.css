@@ -28,7 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, video { max-width: 100%; display: block; }
+img, video { max-width: 100%; height: auto; display: block; }
 a { color: var(--navy); text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 ::selection { background: var(--navy); color: #fff; }
