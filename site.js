@@ -76,9 +76,9 @@
       var srcEl = sv.querySelector('source');
       if (srcEl) {
         var pick = null;
-        if (portrait) pick = 'assets/restoration_scrub_portrait.mp4';
-        else if (innerWidth < 1000) pick = 'assets/restoration_scrub_960.mp4';
-        else if (innerWidth * (window.devicePixelRatio || 1) >= 1800) pick = 'assets/restoration_scrub_1920.mp4';
+        if (portrait) pick = 'assets/restoration_scrub_portrait.mp4?v=3';
+        else if (innerWidth < 1000) pick = 'assets/restoration_scrub_960.mp4?v=3';
+        else if (innerWidth * (window.devicePixelRatio || 1) >= 1800) pick = 'assets/restoration_scrub_1920.mp4?v=3';
         if (pick) { srcEl.src = pick; sv.load(); }
       }
       sv.pause();
