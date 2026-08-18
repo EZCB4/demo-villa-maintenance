@@ -73,12 +73,13 @@
       /* portrait phones get a dedicated 9:16 crop — the 16:9 encodes upscale
          ~5x under object-fit:cover on portrait screens and look soft */
       var portrait = innerHeight > innerWidth;
-      if (portrait || innerWidth < 1000) {
-        var src = sv.querySelector('source');
-        if (src) {
-          src.src = portrait ? 'assets/restoration_scrub_portrait.mp4' : 'assets/restoration_scrub_960.mp4';
-          sv.load();
-        }
+      var srcEl = sv.querySelector('source');
+      if (srcEl) {
+        var pick = null;
+        if (portrait) pick = 'assets/restoration_scrub_portrait.mp4';
+        else if (innerWidth < 1000) pick = 'assets/restoration_scrub_960.mp4';
+        else if (innerWidth * (window.devicePixelRatio || 1) >= 1800) pick = 'assets/restoration_scrub_1920.mp4';
+        if (pick) { srcEl.src = pick; sv.load(); }
       }
       sv.pause();
       sv.addEventListener('loadedmetadata', function () { svDur = sv.duration; });
